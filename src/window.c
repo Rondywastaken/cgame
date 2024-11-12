@@ -1,6 +1,10 @@
 #include "window.h"
+#include <stdio.h>
+
+Game game;
 
 void initGame() {
+    printf("test");
 
     SDL_Init(SDL_INIT_VIDEO);
 
@@ -18,13 +22,10 @@ void initGame() {
     SDL_RenderFillRect(game.renderer, &rect);
 
     SDL_RenderPresent(game.renderer);
+}
 
-    SDL_Delay(2000);
-
+void closeGame() {
     SDL_DestroyWindow(game.window);
-
     SDL_DestroyRenderer(game.renderer);
-
     SDL_Quit();
-
 }

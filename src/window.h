@@ -1,3 +1,6 @@
+#ifndef WINDOW_H
+#define WINDOW_H
+
 #include <SDL2/SDL.h>
 
 typedef struct {
@@ -8,4 +11,6 @@ typedef struct {
 extern Game game;
 
 void initGame();
+void closeGame();
 
+#endif
